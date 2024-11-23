@@ -9,4 +9,4 @@ spec:
   chart: akri
   createNamespace: true
   targetNamespace: akri
-  version: 0.1.2
+  version: 0.1.3
