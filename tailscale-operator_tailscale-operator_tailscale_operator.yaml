@@ -12,4 +12,11 @@ spec:
   valuesContent: |-
     azureKeyVaultSecret:
       vaultName: haw-k3s-great-tuna-akv
-  version: 0.1.0
+    tailscale-operator:
+      operatorConfig:
+        defaultTags:
+          - "tag:haw-k3s-operator"
+        hostname: haw-k3s
+      proxyConfig:
+        defaultTags: "tag:haw-k3s-service"
+  version: 0.1.1
