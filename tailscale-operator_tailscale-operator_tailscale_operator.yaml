@@ -1,0 +1,15 @@
+---
+apiVersion: helm.cattle.io/v1
+kind: HelmChart
+metadata:
+  name: tailscale-operator
+  namespace: kube-system
+spec:
+  repo: https://illallangi.enterprises/helm-charts
+  chart: tailscale-operator
+  createNamespace: true
+  targetNamespace: tailscale-operator
+  valuesContent: |-
+    azureKeyVaultSecret:
+      vaultName: haw-great-tuna-akv
+  version: 0.1.0
