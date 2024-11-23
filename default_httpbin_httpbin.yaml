@@ -15,5 +15,4 @@ spec:
       host: haw-httpbin.great-tuna.ts.net
       annotations:
         tailscale.com/tags: tag:haw-k3s-service,tag:https
-        fuck/me: true
   version: 0.1.1
