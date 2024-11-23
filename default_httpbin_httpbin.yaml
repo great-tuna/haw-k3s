@@ -1,0 +1,19 @@
+---
+apiVersion: helm.cattle.io/v1
+kind: HelmChart
+metadata:
+  name: httpbin
+  namespace: kube-system
+spec:
+  repo: https://illallangi.enterprises/helm-charts
+  chart: httpbin
+  targetNamespace: default
+  valuesContent: |-
+    ingress:
+      enabled: true
+      className: tailscale
+      host: haw-httpbin.great-tuna.ts.net
+      annotations:
+        tailscale.com/tags: tag:haw-k3s-service,tag:https
+        fuck/me: true
+  version: 0.1.1

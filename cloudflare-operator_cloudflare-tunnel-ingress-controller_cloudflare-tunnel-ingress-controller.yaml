@@ -1,0 +1,19 @@
+---
+apiVersion: helm.cattle.io/v1
+kind: HelmChart
+metadata:
+  name: cloudflare-tunnel-ingress-controller
+  namespace: kube-system
+spec:
+  repo: https://helm.strrl.dev
+  chart: cloudflare-tunnel-ingress-controller
+  createNamespace: true
+  targetNamespace: cloudflare-operator
+  valuesContent: |-
+    cloudflare:
+      secretRef:
+        name: cloudflare-api
+        accountIDKey: cloudflare-account-id
+        tunnelNameKey: cloudflare-tunnel-name
+        apiTokenKey: api-token
+  version: 0.0.16

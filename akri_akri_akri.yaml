@@ -1,0 +1,12 @@
+---
+apiVersion: helm.cattle.io/v1
+kind: HelmChart
+metadata:
+  name: akri
+  namespace: kube-system
+spec:
+  repo: https://illallangi.enterprises/helm-charts
+  chart: akri
+  createNamespace: true
+  targetNamespace: akri
+  version: 0.1.1

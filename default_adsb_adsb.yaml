@@ -1,0 +1,31 @@
+---
+apiVersion: helm.cattle.io/v1
+kind: HelmChart
+metadata:
+  name: adsb
+  namespace: kube-system
+spec:
+  repo: https://illallangi.enterprises/helm-charts
+  chart: adsb
+  targetNamespace: default
+  valuesContent: |-
+    fqdn: haw-adsb.illallangi.enterprises
+    ingress:
+      annotations:
+        tailscale.com/tags: tag:haw-k3s-service,tag:https
+      className: cloudflare-tunnel
+      enabled: true
+    ultrafeeder:
+      resources:
+        limits:
+          akri.sh/sdr-adsb: "1"
+        requests:
+          akri.sh/sdr-adsb: "1"
+    location:
+      altitude: "0"
+      latitude: "-17.775555555555556"
+      longitude: "146.1039722222222"
+    timezone: Australia/Melbourne
+    title: Hawthorne Drive ADSB
+  version: 0.1.1
+
