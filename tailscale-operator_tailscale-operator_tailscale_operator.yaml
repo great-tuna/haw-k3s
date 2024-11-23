@@ -11,5 +11,5 @@ spec:
   targetNamespace: tailscale-operator
   valuesContent: |-
     azureKeyVaultSecret:
-      vaultName: haw-great-tuna-akv
+      vaultName: haw-k3s-great-tuna-akv
   version: 0.1.0
