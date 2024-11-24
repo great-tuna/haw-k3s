@@ -1,0 +1,16 @@
+---
+apiVersion: helm.cattle.io/v1
+kind: HelmChart
+metadata:
+  name: local-path-provisioner
+  namespace: kube-system
+spec:
+  repo: https://illallangi.enterprises/helm-charts
+  chart: local-path-provisioner
+  createNamespace: true
+  targetNamespace: local-path-provisioner
+  valuesContent: |-
+    storageClass:
+      pathPattern: "{{ .PVC.Namespace }}-{{ .PVC.Name }}"
+      reclaimPolicy: Retain
+  version: 0.0.30
