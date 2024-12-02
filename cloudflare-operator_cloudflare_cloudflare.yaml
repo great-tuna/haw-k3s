@@ -11,5 +11,5 @@ spec:
   targetNamespace: cloudflare-operator
   valuesContent: |-
     azureKeyVaultSecret:
-      vaultName: haw-k3s-great-tuna-akv
+      vaultName: haw-k3s-great-tuna
   version: 0.1.1
