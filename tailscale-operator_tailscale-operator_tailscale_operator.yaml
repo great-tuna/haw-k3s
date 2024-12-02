@@ -5,7 +5,7 @@ metadata:
   name: tailscale-operator
   namespace: kube-system
 spec:
-  repo: https://illallangi.enterprises/helm-charts
+  repo: https://great-tuna.github.io/helm-charts
   chart: tailscale-operator
   createNamespace: true
   targetNamespace: tailscale-operator

@@ -5,7 +5,7 @@ metadata:
   name: adsb
   namespace: kube-system
 spec:
-  repo: https://illallangi.enterprises/helm-charts
+  repo: https://great-tuna.github.io/helm-charts
   chart: adsb
   targetNamespace: default
   valuesContent: |-
