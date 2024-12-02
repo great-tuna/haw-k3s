@@ -2,11 +2,11 @@
 apiVersion: helm.cattle.io/v1
 kind: HelmChart
 metadata:
-  name: akri
+  name: akri-controller
   namespace: kube-system
 spec:
   repo: https://great-tuna.github.io/helm-charts
   chart: akri
   createNamespace: true
-  targetNamespace: akri
+  targetNamespace: akri-controller
   version: 0.1.6
